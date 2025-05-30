@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  docs:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - .:/app
+      - /app/node_modules
+    restart: unless-stopped
+    command: npm start
+
+  # Дополнительные сервисы можно добавить здесь
+  # Например, для API или БД

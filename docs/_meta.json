@@ -1,0 +1,10 @@
+{
+  "index": {
+    "title": "Главная",
+    "type": "page"
+  },
+  "vvedenie": {
+    "title": "Введение", 
+    "type": "page"
+  }
+}
