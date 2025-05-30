@@ -11,15 +11,10 @@ const banner = <Banner storageKey="nextra-banner">Nextra Documentation</Banner>
 const navbar = (
   <Navbar
     logo={<b>My Docs</b>}
+    docsRepositoryBase="https://github.com/AAChibilyaev/nextra-docs"
   />
 )
 const footer = <Footer>MIT {new Date().getFullYear()} © My Documentation.</Footer>
-
-// Minimal valid pageMap structure
-const emptyPageMap = {
-  items: [],
-  routes: []
-}
 
 export default function RootLayout({ children }) {
   return (
@@ -31,8 +26,6 @@ export default function RootLayout({ children }) {
         <Layout
           banner={banner}
           navbar={navbar}
-          pageMap={emptyPageMap}
-          docsRepositoryBase="https://github.com/your-username/your-repo"
           footer={footer}
         >
           {children}
